@@ -6,8 +6,11 @@ Ext.application({
     name: 'ListDemo',
     
     controllers: ['Main'],
+    views: ['Main'],
     
     launch: function() {
-        Ext.create('ListDemo.view.Viewport');
+        Ext.Viewport.add({
+            xclass: 'ListDemo.view.Main'
+        });
     }
 });

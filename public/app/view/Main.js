@@ -1,6 +1,10 @@
-Ext.define('ListDemo.view.Viewport', {
+Ext.define('ListDemo.view.Main', {
     extend: 'Ext.List',
     id: 'rootpanel',
+    requires: [
+        'ListDemo.view.Detail',
+        'ListDemo.view.List'
+    ],
     
     config: {
         fullscreen: true,
@@ -10,8 +14,7 @@ Ext.define('ListDemo.view.Viewport', {
         },
         items: [
             {
-                xtype: 'listpanel',
-                store: Ext.create('ListDemo.store.Bondgirls'),
+                xtype: 'listpanel'
             },
             {
                 xtype: 'detailpanel',
