@@ -1,5 +1,5 @@
 Ext.define('ListDemo.view.Main', {
-    extend: 'Ext.List',
+    extend: 'Ext.Container',
     id: 'rootpanel',
     requires: [
         'ListDemo.view.Detail',
