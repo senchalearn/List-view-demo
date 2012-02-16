@@ -1,20 +1,23 @@
 Ext.define('ListDemo.view.Main', {
-    extend: 'Ext.Container',
+    extend: 'Ext.navigation.View',
     id: 'rootpanel',
     requires: [
         'ListDemo.view.Detail',
         'ListDemo.view.List',
         'Ext.TitleBar',
     ],
-    
+
     config: {
-        fullscreen: true,
+
         layout: {
             type: 'card',
             animation: 'slide'
         },
         items: [
-            {xtype: 'listpanel'}
+            {
+                xtype: 'listpanel',
+                title: 'Bond girls'
+            }
         ]
     }
 });
