@@ -1,11 +1,7 @@
 Ext.define('ListDemo.view.Main', {
     extend: 'Ext.navigation.View',
     id: 'rootpanel',
-    requires: [
-        'ListDemo.view.Detail',
-        'ListDemo.view.List',
-        'Ext.TitleBar',
-    ],
+    requires: ['ListDemo.view.List','ListDemo.view.Detail'],
 
     config: {
 
