@@ -2,34 +2,23 @@ Ext.define('ListDemo.controller.Main', {
     extend: 'Ext.app.Controller',
     
     models: ['Bondgirl'],
-    views: ['Viewport', 'List', 'Detail'],
     
-    refs: [
-        {
-            ref: 'viewport',
-            selector: '#rootpanel'
+    config: {
+        refs: {
+            'viewport'   : '#rootpanel',
+            'detailpanel': '#bondgirlDetail',
+            'backButton' : 'button[action=back]'
         },
-        {
-            ref: 'detailpanel',
-            selector: '#bondgirlDetail'
-        },
-        {
-            ref: 'backButton',
-            selector: 'button[action=back]'
-        }
-    ],
-    
-    init: function() {
-        this.control({
+        control: {
             'button[action=back]': {
                 tap: 'showList'
             },
             'list': {
                 select: 'showDetail'
             }
-        })
+        }
     },
-
+    
     showList: function() {
         var viewport = this.getViewport();
 
