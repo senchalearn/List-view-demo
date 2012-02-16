@@ -3,7 +3,8 @@ Ext.define('ListDemo.view.Main', {
     id: 'rootpanel',
     requires: [
         'ListDemo.view.Detail',
-        'ListDemo.view.List'
+        'ListDemo.view.List',
+        'Ext.TitleBar',
     ],
     
     config: {

@@ -4,7 +4,7 @@ Ext.define('ListDemo.store.Bondgirls', {
     config: {
         model: 'ListDemo.model.Bondgirl',
         sorters: 'lastName',
-        getGroupString : function(record) {
+        grouper : function(record) {
             return record.get('lastName')[0];
         },
         data: [
