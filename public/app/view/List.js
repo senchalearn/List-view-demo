@@ -7,6 +7,7 @@ Ext.define('ListDemo.view.List', {
     config: {
         grouped: true,
         itemTpl: '{firstName} {lastName}',
-        store: 'Bondgirls'
+        store: 'Bondgirls',
+        onItemDisclosure: true
     }
 });

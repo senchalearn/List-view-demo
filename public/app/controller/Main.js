@@ -9,12 +9,12 @@ Ext.define('ListDemo.controller.Main', {
         },
         control: {
             'list': {
-                itemtap: 'showDetail'
+                disclose: 'showDetail'
             }
         }
     },
     
-    showDetail: function(list, index, node, record) {
+    showDetail: function(list, record) {
         this.getMain().push({
             xtype: 'detailpanel',
             title: record.fullName(),
