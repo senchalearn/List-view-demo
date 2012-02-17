@@ -5,21 +5,19 @@ Ext.define('ListDemo.controller.Main', {
     
     config: {
         refs: {
-            'viewport'   : '#rootpanel',
+            'main'   : '#rootpanel',
         },
         control: {
             'list': {
-                select: 'showDetail'
+                itemtap: 'showDetail'
             }
         }
     },
     
-    showDetail: function(dataview, record) {
-        var viewport = this.getViewport(),
-            detail = Ext.create('ListDemo.view.Detail');
-
-        detail.setData(record.data)
-        viewport.push(detail);
+    showDetail: function(list, index, node, record) {
+        var detailCard = Ext.create('ListDemo.view.Detail');
+        detailCard.setData(record.data);
+        this.getMain().push(detailCard);
     }
 
 });
