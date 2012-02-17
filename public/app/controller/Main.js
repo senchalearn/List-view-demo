@@ -15,7 +15,9 @@ Ext.define('ListDemo.controller.Main', {
     },
     
     showDetail: function(list, index, node, record) {
-        var detailCard = Ext.create('ListDemo.view.Detail');
+        var detailCard = Ext.create('ListDemo.view.Detail', {
+            title: record.fullName()
+        });
         detailCard.setData(record.data);
         this.getMain().push(detailCard);
     }
