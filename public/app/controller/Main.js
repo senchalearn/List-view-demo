@@ -15,11 +15,11 @@ Ext.define('ListDemo.controller.Main', {
     },
     
     showDetail: function(list, index, node, record) {
-        var detailCard = Ext.create('ListDemo.view.Detail', {
-            title: record.fullName()
+        this.getMain().push({
+            xtype: 'detailpanel',
+            title: record.fullName(),
+            data:  record.data
         });
-        detailCard.setData(record.data);
-        this.getMain().push(detailCard);
     }
 
 });
