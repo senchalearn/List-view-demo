@@ -1,9 +1,16 @@
 Ext.define('ListDemo.model.Bondgirl', {
     extend: 'Ext.data.Model',
     config: {
-        fields: ['firstName', 'lastName']
+        fields: ['firstName', 'middleInitial', 'lastName']
     },
+
     fullName: function() {
-        return this.data.firstName + " " + this.data.lastName;
+        var d = this.data,
+        names = [
+            d.firstName,
+            (!d.middleInitial ? "" : d.middleInitial + "."),
+            d.lastName
+        ];
+        return names.join(" ");
     }
 });
