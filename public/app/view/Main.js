@@ -12,7 +12,7 @@ Ext.define('ListDemo.view.Main', {
         items: [
             {
                 xtype: 'listpanel',
-                title: 'Bond girls'
+                title: 'American Presidents'
             }
         ]
     }

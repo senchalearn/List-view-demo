@@ -2,12 +2,12 @@ Ext.define('ListDemo.view.List', {
     extend: 'Ext.List',
     xtype: 'listpanel',
     id: 'bondgirlList',
-    requires: ['ListDemo.store.Bondgirls'],
+    requires: ['ListDemo.store.Presidents'],
     
     config: {
         grouped: true,
         itemTpl: '{firstName} {lastName}',
-        store: 'Bondgirls',
+        store: 'Presidents',
         onItemDisclosure: true
     }
 });

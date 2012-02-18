@@ -1,8 +1,8 @@
-Ext.define('ListDemo.store.Bondgirls', {
+Ext.define('ListDemo.store.Presidents', {
     extend: 'Ext.data.Store',
     
     config: {
-        model: 'ListDemo.model.Bondgirl',
+        model: 'ListDemo.model.President',
         sorters: 'lastName',
         grouper : function(record) {
             return record.get('lastName')[0];

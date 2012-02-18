@@ -7,7 +7,7 @@ Ext.application({
     
     controllers: ['Main'],
     views: ['Main'],
-    stores: ['Bondgirls'],
+    stores: ['Presidents'],
     
     launch: function() {
         Ext.Viewport.add({

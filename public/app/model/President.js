@@ -1,4 +1,4 @@
-Ext.define('ListDemo.model.Bondgirl', {
+Ext.define('ListDemo.model.President', {
     extend: 'Ext.data.Model',
     config: {
         fields: ['firstName', 'middleInitial', 'lastName']
